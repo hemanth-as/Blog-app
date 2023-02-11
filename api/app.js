@@ -11,7 +11,9 @@ app.use(BodyParser.urlencoded({ extended: true }))
 app.use(BodyParser.json())
 app.use(Cors())
 
-Mongoose.connect('mongodb+srv://testerh:testerh@cluster0.mksxcra.mongodb.net/BootcampBlogdb?retryWrites=true&w=majority', { useNewUrlParser: true })
+// Mongoose.connect('mongodb+srv://heman:testerh@cluster0.mksxcra.mongodb.net/BootcampBlogdb?retryWrites=true&w=majority', { useNewUrlParser: true })
+
+Mongoose.connect('mongodb+srv://testerh:testerh@cluster0.jktbpdo.mongodb.net/blogdb?retryWrites=true&w=majority', { useNewUrlParser: true })
 
 // this part works when data is entered manually in database
 app.post("/signin", async (req, res) => {
