@@ -13,6 +13,7 @@ app.use(Cors())
 
 Mongoose.connect('mongodb+srv://testerh:testerh@cluster0.mksxcra.mongodb.net/BootcampBlogdb?retryWrites=true&w=majority', { useNewUrlParser: true })
 
+// this part works when data is entered manually in database
 app.post("/signin", async (req, res) => {
     var email = req.body.email
     var password = req.body.password
@@ -36,6 +37,7 @@ app.post("/signin", async (req, res) => {
 
 })
 
+// this part where token is being generated only works when database is working
 // app.post("/signin", (req, res) => {
 //     var email = req.body.email
 //     var password = req.body.password
